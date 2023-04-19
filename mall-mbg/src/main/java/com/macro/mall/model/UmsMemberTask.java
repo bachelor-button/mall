@@ -61,17 +61,15 @@ public class UmsMemberTask implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", name=").append(name);
-        sb.append(", growth=").append(growth);
-        sb.append(", intergration=").append(intergration);
-        sb.append(", type=").append(type);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", name=" + name +
+                ", growth=" + growth +
+                ", intergration=" + intergration +
+                ", type=" + type +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

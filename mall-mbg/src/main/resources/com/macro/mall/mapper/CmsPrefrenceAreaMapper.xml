@@ -75,7 +75,7 @@
   <sql id="Blob_Column_List">
     pic
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.macro.mall.model.CmsPrefrenceAreaExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.macro.mall.model.CmsPreferenceAreaExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -91,7 +91,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="com.macro.mall.model.CmsPrefrenceAreaExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.macro.mall.model.CmsPreferenceAreaExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -117,7 +117,7 @@
     delete from cms_prefrence_area
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.macro.mall.model.CmsPrefrenceAreaExample">
+  <delete id="deleteByExample" parameterType="com.macro.mall.model.CmsPreferenceAreaExample">
     delete from cms_prefrence_area
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -172,7 +172,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.macro.mall.model.CmsPrefrenceAreaExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.macro.mall.model.CmsPreferenceAreaExample" resultType="java.lang.Long">
     select count(*) from cms_prefrence_area
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

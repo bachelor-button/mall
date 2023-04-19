@@ -117,22 +117,20 @@ public class OmsCompanyAddress implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", addressName=").append(addressName);
-        sb.append(", sendStatus=").append(sendStatus);
-        sb.append(", receiveStatus=").append(receiveStatus);
-        sb.append(", name=").append(name);
-        sb.append(", phone=").append(phone);
-        sb.append(", province=").append(province);
-        sb.append(", city=").append(city);
-        sb.append(", region=").append(region);
-        sb.append(", detailAddress=").append(detailAddress);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", addressName=" + addressName +
+                ", sendStatus=" + sendStatus +
+                ", receiveStatus=" + receiveStatus +
+                ", name=" + name +
+                ", phone=" + phone +
+                ", province=" + province +
+                ", city=" + city +
+                ", region=" + region +
+                ", detailAddress=" + detailAddress +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

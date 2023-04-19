@@ -125,23 +125,21 @@ public class SmsCouponHistory implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", couponId=").append(couponId);
-        sb.append(", memberId=").append(memberId);
-        sb.append(", couponCode=").append(couponCode);
-        sb.append(", memberNickname=").append(memberNickname);
-        sb.append(", getType=").append(getType);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", useStatus=").append(useStatus);
-        sb.append(", useTime=").append(useTime);
-        sb.append(", orderId=").append(orderId);
-        sb.append(", orderSn=").append(orderSn);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", couponId=" + couponId +
+                ", memberId=" + memberId +
+                ", couponCode=" + couponCode +
+                ", memberNickname=" + memberNickname +
+                ", getType=" + getType +
+                ", createTime=" + createTime +
+                ", useStatus=" + useStatus +
+                ", useTime=" + useTime +
+                ", orderId=" + orderId +
+                ", orderSn=" + orderSn +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

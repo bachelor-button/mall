@@ -179,28 +179,26 @@ public class UmsMemberStatisticsInfo implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", memberId=").append(memberId);
-        sb.append(", consumeAmount=").append(consumeAmount);
-        sb.append(", orderCount=").append(orderCount);
-        sb.append(", couponCount=").append(couponCount);
-        sb.append(", commentCount=").append(commentCount);
-        sb.append(", returnOrderCount=").append(returnOrderCount);
-        sb.append(", loginCount=").append(loginCount);
-        sb.append(", attendCount=").append(attendCount);
-        sb.append(", fansCount=").append(fansCount);
-        sb.append(", collectProductCount=").append(collectProductCount);
-        sb.append(", collectSubjectCount=").append(collectSubjectCount);
-        sb.append(", collectTopicCount=").append(collectTopicCount);
-        sb.append(", collectCommentCount=").append(collectCommentCount);
-        sb.append(", inviteFriendCount=").append(inviteFriendCount);
-        sb.append(", recentOrderTime=").append(recentOrderTime);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", memberId=" + memberId +
+                ", consumeAmount=" + consumeAmount +
+                ", orderCount=" + orderCount +
+                ", couponCount=" + couponCount +
+                ", commentCount=" + commentCount +
+                ", returnOrderCount=" + returnOrderCount +
+                ", loginCount=" + loginCount +
+                ", attendCount=" + attendCount +
+                ", fansCount=" + fansCount +
+                ", collectProductCount=" + collectProductCount +
+                ", collectSubjectCount=" + collectSubjectCount +
+                ", collectTopicCount=" + collectTopicCount +
+                ", collectCommentCount=" + collectCommentCount +
+                ", inviteFriendCount=" + inviteFriendCount +
+                ", recentOrderTime=" + recentOrderTime +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

@@ -1,6 +1,5 @@
 package com.macro.mall.model;
 
-import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class SmsHomeBrand implements Serializable {
@@ -58,17 +57,15 @@ public class SmsHomeBrand implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", brandId=").append(brandId);
-        sb.append(", brandName=").append(brandName);
-        sb.append(", recommendStatus=").append(recommendStatus);
-        sb.append(", sort=").append(sort);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", brandId=" + brandId +
+                ", brandName=" + brandName +
+                ", recommendStatus=" + recommendStatus +
+                ", sort=" + sort +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

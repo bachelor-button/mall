@@ -85,19 +85,17 @@ public class UmsMemberRuleSetting implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", continueSignDay=").append(continueSignDay);
-        sb.append(", continueSignPoint=").append(continueSignPoint);
-        sb.append(", consumePerPoint=").append(consumePerPoint);
-        sb.append(", lowOrderAmount=").append(lowOrderAmount);
-        sb.append(", maxPointPerOrder=").append(maxPointPerOrder);
-        sb.append(", type=").append(type);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", continueSignDay=" + continueSignDay +
+                ", continueSignPoint=" + continueSignPoint +
+                ", consumePerPoint=" + consumePerPoint +
+                ", lowOrderAmount=" + lowOrderAmount +
+                ", maxPointPerOrder=" + maxPointPerOrder +
+                ", type=" + type +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

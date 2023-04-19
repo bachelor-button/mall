@@ -132,24 +132,22 @@ public class PmsProductOperateLog implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", productId=").append(productId);
-        sb.append(", priceOld=").append(priceOld);
-        sb.append(", priceNew=").append(priceNew);
-        sb.append(", salePriceOld=").append(salePriceOld);
-        sb.append(", salePriceNew=").append(salePriceNew);
-        sb.append(", giftPointOld=").append(giftPointOld);
-        sb.append(", giftPointNew=").append(giftPointNew);
-        sb.append(", usePointLimitOld=").append(usePointLimitOld);
-        sb.append(", usePointLimitNew=").append(usePointLimitNew);
-        sb.append(", operateMan=").append(operateMan);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", productId=" + productId +
+                ", priceOld=" + priceOld +
+                ", priceNew=" + priceNew +
+                ", salePriceOld=" + salePriceOld +
+                ", salePriceNew=" + salePriceNew +
+                ", giftPointOld=" + giftPointOld +
+                ", giftPointNew=" + giftPointNew +
+                ", usePointLimitOld=" + usePointLimitOld +
+                ", usePointLimitNew=" + usePointLimitNew +
+                ", operateMan=" + operateMan +
+                ", createTime=" + createTime +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

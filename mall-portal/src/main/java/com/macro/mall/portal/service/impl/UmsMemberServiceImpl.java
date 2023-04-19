@@ -77,7 +77,7 @@ public class UmsMemberServiceImpl implements UmsMemberService {
     @Override
     public void register(String username, String password, String telephone, String authCode) {
         //验证验证码
-        if(!verifyAuthCode(authCode,telephone)){
+        if(verifyAuthCode(authCode, telephone)){
             Asserts.fail("验证码错误");
         }
         //查询是否已有该用户
@@ -126,7 +126,7 @@ public class UmsMemberServiceImpl implements UmsMemberService {
             Asserts.fail("该账号不存在");
         }
         //验证验证码
-        if(!verifyAuthCode(authCode,telephone)){
+        if(verifyAuthCode(authCode, telephone)){
             Asserts.fail("验证码错误");
         }
         UmsMember umsMember = memberList.get(0);
@@ -187,10 +187,10 @@ public class UmsMemberServiceImpl implements UmsMemberService {
     //对输入的验证码进行校验
     private boolean verifyAuthCode(String authCode, String telephone){
         if(StrUtil.isEmpty(authCode)){
-            return false;
+            return true;
         }
         String realAuthCode = memberCacheService.getAuthCode(telephone);
-        return authCode.equals(realAuthCode);
+        return !authCode.equals(realAuthCode);
     }
 
 }

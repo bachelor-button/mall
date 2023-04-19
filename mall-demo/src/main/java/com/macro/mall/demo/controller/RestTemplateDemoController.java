@@ -69,8 +69,7 @@ public class RestTemplateDemoController {
     @ResponseBody
     public Object getForObject(@PathVariable Long id) {
         String url = HOST_MALL_ADMIN + "/brand/{id}";
-        CommonResult commonResult = restTemplate.getForObject(url, CommonResult.class, id);
-        return commonResult;
+        return restTemplate.getForObject(url, CommonResult.class, id);
     }
 
     @ApiOperation("postForEntity jsonBody")
@@ -87,8 +86,7 @@ public class RestTemplateDemoController {
     @ResponseBody
     public Object postForObject(@RequestBody PmsBrand brand) {
         String url = HOST_MALL_ADMIN + "/brand/create";
-        CommonResult commonResult = restTemplate.postForObject(url, brand, CommonResult.class);
-        return commonResult;
+        return restTemplate.postForObject(url, brand, CommonResult.class);
     }
 
     @ApiOperation("postForEntity form")

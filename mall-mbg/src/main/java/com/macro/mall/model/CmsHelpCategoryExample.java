@@ -53,8 +53,7 @@ public class CmsHelpCategoryExample {
     }
 
     protected Criteria createCriteriaInternal() {
-        Criteria criteria = new Criteria();
-        return criteria;
+        return new Criteria();
     }
 
     public void clear() {
@@ -492,7 +491,7 @@ public class CmsHelpCategoryExample {
     }
 
     public static class Criterion {
-        private String condition;
+        private final String condition;
 
         private Object value;
 
@@ -506,7 +505,7 @@ public class CmsHelpCategoryExample {
 
         private boolean listValue;
 
-        private String typeHandler;
+        private final String typeHandler;
 
         public String getCondition() {
             return condition;

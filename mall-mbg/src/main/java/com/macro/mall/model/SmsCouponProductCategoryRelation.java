@@ -60,17 +60,15 @@ public class SmsCouponProductCategoryRelation implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", couponId=").append(couponId);
-        sb.append(", productCategoryId=").append(productCategoryId);
-        sb.append(", productCategoryName=").append(productCategoryName);
-        sb.append(", parentCategoryName=").append(parentCategoryName);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", couponId=" + couponId +
+                ", productCategoryId=" + productCategoryId +
+                ", productCategoryName=" + productCategoryName +
+                ", parentCategoryName=" + parentCategoryName +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

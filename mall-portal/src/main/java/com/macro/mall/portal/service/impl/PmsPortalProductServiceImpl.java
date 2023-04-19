@@ -74,11 +74,10 @@ public class PmsPortalProductServiceImpl implements PmsPortalProductService {
     public List<PmsProductCategoryNode> categoryTreeList() {
         PmsProductCategoryExample example = new PmsProductCategoryExample();
         List<PmsProductCategory> allList = productCategoryMapper.selectByExample(example);
-        List<PmsProductCategoryNode> result = allList.stream()
+        return allList.stream()
                 .filter(item -> item.getParentId().equals(0L))
                 .map(item -> covert(item, allList))
                 .collect(Collectors.toList());
-        return result;
     }
 
     @Override

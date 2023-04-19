@@ -84,8 +84,8 @@ public class UmsMemberCouponServiceImpl implements UmsMemberCouponService {
      */
     private String generateCouponCode(Long memberId) {
         StringBuilder sb = new StringBuilder();
-        Long currentTimeMillis = System.currentTimeMillis();
-        String timeMillisStr = currentTimeMillis.toString();
+        long currentTimeMillis = System.currentTimeMillis();
+        String timeMillisStr = Long.toString(currentTimeMillis);
         sb.append(timeMillisStr.substring(timeMillisStr.length() - 8));
         for (int i = 0; i < 4; i++) {
             sb.append(new Random().nextInt(10));

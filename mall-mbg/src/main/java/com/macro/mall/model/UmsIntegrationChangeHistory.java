@@ -94,20 +94,18 @@ public class UmsIntegrationChangeHistory implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", memberId=").append(memberId);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", changeType=").append(changeType);
-        sb.append(", changeCount=").append(changeCount);
-        sb.append(", operateMan=").append(operateMan);
-        sb.append(", operateNote=").append(operateNote);
-        sb.append(", sourceType=").append(sourceType);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", memberId=" + memberId +
+                ", createTime=" + createTime +
+                ", changeType=" + changeType +
+                ", changeCount=" + changeCount +
+                ", operateMan=" + operateMan +
+                ", operateNote=" + operateNote +
+                ", sourceType=" + sourceType +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

@@ -137,24 +137,22 @@ public class PmsProductAttribute implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", productAttributeCategoryId=").append(productAttributeCategoryId);
-        sb.append(", name=").append(name);
-        sb.append(", selectType=").append(selectType);
-        sb.append(", inputType=").append(inputType);
-        sb.append(", inputList=").append(inputList);
-        sb.append(", sort=").append(sort);
-        sb.append(", filterType=").append(filterType);
-        sb.append(", searchType=").append(searchType);
-        sb.append(", relatedStatus=").append(relatedStatus);
-        sb.append(", handAddStatus=").append(handAddStatus);
-        sb.append(", type=").append(type);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", productAttributeCategoryId=" + productAttributeCategoryId +
+                ", name=" + name +
+                ", selectType=" + selectType +
+                ", inputType=" + inputType +
+                ", inputList=" + inputList +
+                ", sort=" + sort +
+                ", filterType=" + filterType +
+                ", searchType=" + searchType +
+                ", relatedStatus=" + relatedStatus +
+                ", handAddStatus=" + handAddStatus +
+                ", type=" + type +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

@@ -12,6 +12,7 @@ import com.macro.mall.service.UmsAdminCacheService;
 import com.macro.mall.service.UmsAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.util.CastUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -104,7 +105,7 @@ public class UmsAdminCacheServiceImpl implements UmsAdminCacheService {
     @Override
     public List<UmsResource> getResourceList(Long adminId) {
         String key = REDIS_DATABASE + ":" + REDIS_KEY_RESOURCE_LIST + ":" + adminId;
-        return (List<UmsResource>) redisService.get(key);
+        return CastUtils.cast(redisService.get(key));
     }
 
     @Override

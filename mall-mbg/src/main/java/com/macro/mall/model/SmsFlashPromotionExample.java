@@ -2,7 +2,6 @@ package com.macro.mall.model;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 public class SmsFlashPromotionExample {
@@ -55,8 +54,7 @@ public class SmsFlashPromotionExample {
     }
 
     protected Criteria createCriteriaInternal() {
-        Criteria criteria = new Criteria();
-        return criteria;
+        return new Criteria();
     }
 
     public void clear() {
@@ -118,9 +116,8 @@ public class SmsFlashPromotionExample {
                 throw new RuntimeException("Value list for " + property + " cannot be null or empty");
             }
             List<java.sql.Date> dateList = new ArrayList<>();
-            Iterator<Date> iter = values.iterator();
-            while (iter.hasNext()) {
-                dateList.add(new java.sql.Date(iter.next().getTime()));
+            for (Date value : values) {
+                dateList.add(new java.sql.Date(value.getTime()));
             }
             addCriterion(condition, dateList, property);
         }
@@ -510,7 +507,7 @@ public class SmsFlashPromotionExample {
     }
 
     public static class Criterion {
-        private String condition;
+        private final String condition;
 
         private Object value;
 
@@ -524,7 +521,7 @@ public class SmsFlashPromotionExample {
 
         private boolean listValue;
 
-        private String typeHandler;
+        private final String typeHandler;
 
         public String getCondition() {
             return condition;

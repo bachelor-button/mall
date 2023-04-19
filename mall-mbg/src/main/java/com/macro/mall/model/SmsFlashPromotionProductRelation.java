@@ -95,20 +95,18 @@ public class SmsFlashPromotionProductRelation implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", flashPromotionId=").append(flashPromotionId);
-        sb.append(", flashPromotionSessionId=").append(flashPromotionSessionId);
-        sb.append(", productId=").append(productId);
-        sb.append(", flashPromotionPrice=").append(flashPromotionPrice);
-        sb.append(", flashPromotionCount=").append(flashPromotionCount);
-        sb.append(", flashPromotionLimit=").append(flashPromotionLimit);
-        sb.append(", sort=").append(sort);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", flashPromotionId=" + flashPromotionId +
+                ", flashPromotionSessionId=" + flashPromotionSessionId +
+                ", productId=" + productId +
+                ", flashPromotionPrice=" + flashPromotionPrice +
+                ", flashPromotionCount=" + flashPromotionCount +
+                ", flashPromotionLimit=" + flashPromotionLimit +
+                ", sort=" + sort +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

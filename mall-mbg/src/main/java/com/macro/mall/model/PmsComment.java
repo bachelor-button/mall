@@ -164,27 +164,25 @@ public class PmsComment implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", productId=").append(productId);
-        sb.append(", memberNickName=").append(memberNickName);
-        sb.append(", productName=").append(productName);
-        sb.append(", star=").append(star);
-        sb.append(", memberIp=").append(memberIp);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", showStatus=").append(showStatus);
-        sb.append(", productAttribute=").append(productAttribute);
-        sb.append(", collectCouont=").append(collectCouont);
-        sb.append(", readCount=").append(readCount);
-        sb.append(", pics=").append(pics);
-        sb.append(", memberIcon=").append(memberIcon);
-        sb.append(", replayCount=").append(replayCount);
-        sb.append(", content=").append(content);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", productId=" + productId +
+                ", memberNickName=" + memberNickName +
+                ", productName=" + productName +
+                ", star=" + star +
+                ", memberIp=" + memberIp +
+                ", createTime=" + createTime +
+                ", showStatus=" + showStatus +
+                ", productAttribute=" + productAttribute +
+                ", collectCouont=" + collectCouont +
+                ", readCount=" + readCount +
+                ", pics=" + pics +
+                ", memberIcon=" + memberIcon +
+                ", replayCount=" + replayCount +
+                ", content=" + content +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

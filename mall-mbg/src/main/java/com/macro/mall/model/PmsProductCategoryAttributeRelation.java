@@ -1,6 +1,5 @@
 package com.macro.mall.model;
 
-import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class PmsProductCategoryAttributeRelation implements Serializable {
@@ -38,15 +37,13 @@ public class PmsProductCategoryAttributeRelation implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", productCategoryId=").append(productCategoryId);
-        sb.append(", productAttributeId=").append(productAttributeId);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", productCategoryId=" + productCategoryId +
+                ", productAttributeId=" + productAttributeId +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

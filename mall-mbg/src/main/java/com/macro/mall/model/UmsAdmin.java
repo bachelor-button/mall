@@ -116,22 +116,20 @@ public class UmsAdmin implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", username=").append(username);
-        sb.append(", password=").append(password);
-        sb.append(", icon=").append(icon);
-        sb.append(", email=").append(email);
-        sb.append(", nickName=").append(nickName);
-        sb.append(", note=").append(note);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", loginTime=").append(loginTime);
-        sb.append(", status=").append(status);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", username=" + username +
+                ", password=" + password +
+                ", icon=" + icon +
+                ", email=" + email +
+                ", nickName=" + nickName +
+                ", note=" + note +
+                ", createTime=" + createTime +
+                ", loginTime=" + loginTime +
+                ", status=" + status +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

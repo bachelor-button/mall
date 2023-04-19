@@ -74,18 +74,16 @@ public class UmsResource implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", name=").append(name);
-        sb.append(", url=").append(url);
-        sb.append(", description=").append(description);
-        sb.append(", categoryId=").append(categoryId);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", createTime=" + createTime +
+                ", name=" + name +
+                ", url=" + url +
+                ", description=" + description +
+                ", categoryId=" + categoryId +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

@@ -19,9 +19,9 @@ import java.util.List;
  * Created by macro on 2018/6/1.
  */
 @Controller
-@Api(tags = "CmsPrefrenceAreaController")
-@Tag(name = "CmsPrefrenceAreaController", description = "商品优选管理")
-@RequestMapping("/prefrenceArea")
+@Api(tags = "CmsPreferenceAreaController")
+@Tag(name = "CmsPreferenceAreaController", description = "商品优选管理")
+@RequestMapping("/preferenceArea")
 public class CmsPrefrenceAreaController {
     @Autowired
     private CmsPrefrenceAreaService prefrenceAreaService;

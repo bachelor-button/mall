@@ -73,18 +73,16 @@ public class OmsOrderSetting implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", flashOrderOvertime=").append(flashOrderOvertime);
-        sb.append(", normalOrderOvertime=").append(normalOrderOvertime);
-        sb.append(", confirmOvertime=").append(confirmOvertime);
-        sb.append(", finishOvertime=").append(finishOvertime);
-        sb.append(", commentOvertime=").append(commentOvertime);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", flashOrderOvertime=" + flashOrderOvertime +
+                ", normalOrderOvertime=" + normalOrderOvertime +
+                ", confirmOvertime=" + confirmOvertime +
+                ", finishOvertime=" + finishOvertime +
+                ", commentOvertime=" + commentOvertime +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

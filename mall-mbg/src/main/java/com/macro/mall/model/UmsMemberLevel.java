@@ -148,25 +148,23 @@ public class UmsMemberLevel implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", name=").append(name);
-        sb.append(", growthPoint=").append(growthPoint);
-        sb.append(", defaultStatus=").append(defaultStatus);
-        sb.append(", freeFreightPoint=").append(freeFreightPoint);
-        sb.append(", commentGrowthPoint=").append(commentGrowthPoint);
-        sb.append(", priviledgeFreeFreight=").append(priviledgeFreeFreight);
-        sb.append(", priviledgeSignIn=").append(priviledgeSignIn);
-        sb.append(", priviledgeComment=").append(priviledgeComment);
-        sb.append(", priviledgePromotion=").append(priviledgePromotion);
-        sb.append(", priviledgeMemberPrice=").append(priviledgeMemberPrice);
-        sb.append(", priviledgeBirthday=").append(priviledgeBirthday);
-        sb.append(", note=").append(note);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", name=" + name +
+                ", growthPoint=" + growthPoint +
+                ", defaultStatus=" + defaultStatus +
+                ", freeFreightPoint=" + freeFreightPoint +
+                ", commentGrowthPoint=" + commentGrowthPoint +
+                ", priviledgeFreeFreight=" + priviledgeFreeFreight +
+                ", priviledgeSignIn=" + priviledgeSignIn +
+                ", priviledgeComment=" + priviledgeComment +
+                ", priviledgePromotion=" + priviledgePromotion +
+                ", priviledgeMemberPrice=" + priviledgeMemberPrice +
+                ", priviledgeBirthday=" + priviledgeBirthday +
+                ", note=" + note +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

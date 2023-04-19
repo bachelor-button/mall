@@ -60,17 +60,15 @@ public class PmsMemberPrice implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", productId=").append(productId);
-        sb.append(", memberLevelId=").append(memberLevelId);
-        sb.append(", memberPrice=").append(memberPrice);
-        sb.append(", memberLevelName=").append(memberLevelName);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", productId=" + productId +
+                ", memberLevelId=" + memberLevelId +
+                ", memberPrice=" + memberPrice +
+                ", memberLevelName=" + memberLevelName +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

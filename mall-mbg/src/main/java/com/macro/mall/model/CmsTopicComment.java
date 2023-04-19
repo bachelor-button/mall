@@ -1,6 +1,5 @@
 package com.macro.mall.model;
 
-import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -79,19 +78,17 @@ public class CmsTopicComment implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", memberNickName=").append(memberNickName);
-        sb.append(", topicId=").append(topicId);
-        sb.append(", memberIcon=").append(memberIcon);
-        sb.append(", content=").append(content);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", showStatus=").append(showStatus);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", memberNickName=" + memberNickName +
+                ", topicId=" + topicId +
+                ", memberIcon=" + memberIcon +
+                ", content=" + content +
+                ", createTime=" + createTime +
+                ", showStatus=" + showStatus +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

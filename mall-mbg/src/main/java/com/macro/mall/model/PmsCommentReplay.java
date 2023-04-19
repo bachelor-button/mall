@@ -80,19 +80,17 @@ public class PmsCommentReplay implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", commentId=").append(commentId);
-        sb.append(", memberNickName=").append(memberNickName);
-        sb.append(", memberIcon=").append(memberIcon);
-        sb.append(", content=").append(content);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", type=").append(type);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", commentId=" + commentId +
+                ", memberNickName=" + memberNickName +
+                ", memberIcon=" + memberIcon +
+                ", content=" + content +
+                ", createTime=" + createTime +
+                ", type=" + type +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

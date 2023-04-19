@@ -134,24 +134,22 @@ public class PmsProductCategory implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", parentId=").append(parentId);
-        sb.append(", name=").append(name);
-        sb.append(", level=").append(level);
-        sb.append(", productCount=").append(productCount);
-        sb.append(", productUnit=").append(productUnit);
-        sb.append(", navStatus=").append(navStatus);
-        sb.append(", showStatus=").append(showStatus);
-        sb.append(", sort=").append(sort);
-        sb.append(", icon=").append(icon);
-        sb.append(", keywords=").append(keywords);
-        sb.append(", description=").append(description);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", parentId=" + parentId +
+                ", name=" + name +
+                ", level=" + level +
+                ", productCount=" + productCount +
+                ", productUnit=" + productUnit +
+                ", navStatus=" + navStatus +
+                ", showStatus=" + showStatus +
+                ", sort=" + sort +
+                ", icon=" + icon +
+                ", keywords=" + keywords +
+                ", description=" + description +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

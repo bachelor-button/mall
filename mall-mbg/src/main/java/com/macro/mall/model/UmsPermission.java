@@ -118,22 +118,20 @@ public class UmsPermission implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", pid=").append(pid);
-        sb.append(", name=").append(name);
-        sb.append(", value=").append(value);
-        sb.append(", icon=").append(icon);
-        sb.append(", type=").append(type);
-        sb.append(", uri=").append(uri);
-        sb.append(", status=").append(status);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", sort=").append(sort);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", pid=" + pid +
+                ", name=" + name +
+                ", value=" + value +
+                ", icon=" + icon +
+                ", type=" + type +
+                ", uri=" + uri +
+                ", status=" + status +
+                ", createTime=" + createTime +
+                ", sort=" + sort +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

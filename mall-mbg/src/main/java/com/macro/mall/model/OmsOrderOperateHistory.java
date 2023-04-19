@@ -74,18 +74,16 @@ public class OmsOrderOperateHistory implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", orderId=").append(orderId);
-        sb.append(", operateMan=").append(operateMan);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", orderStatus=").append(orderStatus);
-        sb.append(", note=").append(note);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", orderId=" + orderId +
+                ", operateMan=" + operateMan +
+                ", createTime=" + createTime +
+                ", orderStatus=" + orderStatus +
+                ", note=" + note +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

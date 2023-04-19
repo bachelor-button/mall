@@ -70,18 +70,16 @@ public class UmsAdminLoginLog implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", adminId=").append(adminId);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", ip=").append(ip);
-        sb.append(", address=").append(address);
-        sb.append(", userAgent=").append(userAgent);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", adminId=" + adminId +
+                ", createTime=" + createTime +
+                ", ip=" + ip +
+                ", address=" + address +
+                ", userAgent=" + userAgent +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

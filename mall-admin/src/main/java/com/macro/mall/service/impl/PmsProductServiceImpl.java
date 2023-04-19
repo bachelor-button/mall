@@ -69,11 +69,10 @@ public class PmsProductServiceImpl implements PmsProductService {
     public int create(PmsProductParam productParam) {
         int count;
         //创建商品
-        PmsProduct product = productParam;
-        product.setId(null);
-        productMapper.insertSelective(product);
+        productParam.setId(null);
+        productMapper.insertSelective(productParam);
         //根据促销类型设置价格：会员价格、阶梯价格、满减价格
-        Long productId = product.getId();
+        Long productId = productParam.getId();
         //会员价格
         relateAndInsertList(memberPriceDao, productParam.getMemberPriceList(), productId);
         //阶梯价格
@@ -100,14 +99,13 @@ public class PmsProductServiceImpl implements PmsProductService {
             PmsSkuStock skuStock = skuStockList.get(i);
             if(StrUtil.isEmpty(skuStock.getSkuCode())){
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-                StringBuilder sb = new StringBuilder();
                 //日期
-                sb.append(sdf.format(new Date()));
-                //四位商品id
-                sb.append(String.format("%04d", productId));
-                //三位索引id
-                sb.append(String.format("%03d", i+1));
-                skuStock.setSkuCode(sb.toString());
+                String sb = sdf.format(new Date()) +
+                        //四位商品id
+                        String.format("%04d", productId) +
+                        //三位索引id
+                        String.format("%03d", i + 1);
+                skuStock.setSkuCode(sb);
             }
         }
     }
@@ -121,9 +119,8 @@ public class PmsProductServiceImpl implements PmsProductService {
     public int update(Long id, PmsProductParam productParam) {
         int count;
         //更新商品信息
-        PmsProduct product = productParam;
-        product.setId(id);
-        productMapper.updateByPrimaryKeySelective(product);
+        productParam.setId(id);
+        productMapper.updateByPrimaryKeySelective(productParam);
         //会员价格
         PmsMemberPriceExample pmsMemberPriceExample = new PmsMemberPriceExample();
         pmsMemberPriceExample.createCriteria().andProductIdEqualTo(id);

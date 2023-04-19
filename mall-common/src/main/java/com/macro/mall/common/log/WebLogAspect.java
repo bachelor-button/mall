@@ -44,11 +44,11 @@ public class WebLogAspect {
     }
 
     @Before("webLog()")
-    public void doBefore(JoinPoint joinPoint) throws Throwable {
+    public void doBefore(JoinPoint joinPoint) {
     }
 
     @AfterReturning(value = "webLog()", returning = "ret")
-    public void doAfterReturning(Object ret) throws Throwable {
+    public void doAfterReturning(Object ret) {
     }
 
     @Around("webLog()")
@@ -56,7 +56,10 @@ public class WebLogAspect {
         long startTime = System.currentTimeMillis();
         //获取当前请求对象
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = attributes.getRequest();
+        HttpServletRequest request = null;
+        if (attributes != null) {
+            request = attributes.getRequest();
+        }
         //记录请求信息(通过Logstash传入Elasticsearch)
         WebLog webLog = new WebLog();
         Object result = joinPoint.proceed();

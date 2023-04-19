@@ -107,21 +107,19 @@ public class UmsMenu implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", parentId=").append(parentId);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", title=").append(title);
-        sb.append(", level=").append(level);
-        sb.append(", sort=").append(sort);
-        sb.append(", name=").append(name);
-        sb.append(", icon=").append(icon);
-        sb.append(", hidden=").append(hidden);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", parentId=" + parentId +
+                ", createTime=" + createTime +
+                ", title=" + title +
+                ", level=" + level +
+                ", sort=" + sort +
+                ", name=" + name +
+                ", icon=" + icon +
+                ", hidden=" + hidden +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

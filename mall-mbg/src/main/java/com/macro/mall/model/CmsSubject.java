@@ -175,28 +175,26 @@ public class CmsSubject implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", categoryId=").append(categoryId);
-        sb.append(", title=").append(title);
-        sb.append(", pic=").append(pic);
-        sb.append(", productCount=").append(productCount);
-        sb.append(", recommendStatus=").append(recommendStatus);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", collectCount=").append(collectCount);
-        sb.append(", readCount=").append(readCount);
-        sb.append(", commentCount=").append(commentCount);
-        sb.append(", albumPics=").append(albumPics);
-        sb.append(", description=").append(description);
-        sb.append(", showStatus=").append(showStatus);
-        sb.append(", forwardCount=").append(forwardCount);
-        sb.append(", categoryName=").append(categoryName);
-        sb.append(", content=").append(content);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", categoryId=" + categoryId +
+                ", title=" + title +
+                ", pic=" + pic +
+                ", productCount=" + productCount +
+                ", recommendStatus=" + recommendStatus +
+                ", createTime=" + createTime +
+                ", collectCount=" + collectCount +
+                ", readCount=" + readCount +
+                ", commentCount=" + commentCount +
+                ", albumPics=" + albumPics +
+                ", description=" + description +
+                ", showStatus=" + showStatus +
+                ", forwardCount=" + forwardCount +
+                ", categoryName=" + categoryName +
+                ", content=" + content +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

@@ -1,6 +1,5 @@
 package com.macro.mall.model;
 
-import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
 public class UmsAdminPermissionRelation implements Serializable {
@@ -48,16 +47,14 @@ public class UmsAdminPermissionRelation implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", adminId=").append(adminId);
-        sb.append(", permissionId=").append(permissionId);
-        sb.append(", type=").append(type);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", adminId=" + adminId +
+                ", permissionId=" + permissionId +
+                ", type=" + type +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

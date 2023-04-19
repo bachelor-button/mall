@@ -5,15 +5,15 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 
 /**
  * SpringSecurity需要的用户详情
  * Created by macro on 2018/4/26.
  */
 public class AdminUserDetails implements UserDetails {
-    private UmsAdmin umsAdmin;
+    private final UmsAdmin umsAdmin;
 
     public AdminUserDetails(UmsAdmin umsAdmin) {
         this.umsAdmin = umsAdmin;
@@ -22,7 +22,7 @@ public class AdminUserDetails implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         //返回当前用户的权限
-        return Arrays.asList(new SimpleGrantedAuthority("TEST"));
+        return Collections.singletonList(new SimpleGrantedAuthority("TEST"));
     }
 
     @Override

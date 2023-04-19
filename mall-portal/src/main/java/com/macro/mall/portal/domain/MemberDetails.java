@@ -5,8 +5,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 
 /**
  * SpringSecurity需要的用户信息封装类
@@ -22,7 +22,7 @@ public class MemberDetails implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         //返回当前用户的权限
-        return Arrays.asList(new SimpleGrantedAuthority("TEST"));
+        return Collections.singletonList(new SimpleGrantedAuthority("TEST"));
     }
 
     @Override

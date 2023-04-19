@@ -19,7 +19,7 @@ import java.util.List;
 @Data
 @EqualsAndHashCode
 @Document(indexName = "pms")
-@Setting(shards = 1,replicas = 0)
+@Setting(replicas = 0)
 public class EsProduct implements Serializable {
     private static final long serialVersionUID = -1L;
     @Id

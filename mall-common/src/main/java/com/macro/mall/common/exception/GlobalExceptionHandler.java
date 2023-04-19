@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * 全局异常处理类
  * Created by macro on 2020/2/27.
@@ -28,20 +30,17 @@ public class GlobalExceptionHandler {
     @ResponseBody
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     public CommonResult handleValidException(MethodArgumentNotValidException e) {
-        BindingResult bindingResult = e.getBindingResult();
-        String message = null;
-        if (bindingResult.hasErrors()) {
-            FieldError fieldError = bindingResult.getFieldError();
-            if (fieldError != null) {
-                message = fieldError.getField()+fieldError.getDefaultMessage();
-            }
-        }
-        return CommonResult.validateFailed(message);
+        return getCommonResult(e);
     }
 
     @ResponseBody
     @ExceptionHandler(value = BindException.class)
     public CommonResult handleValidException(BindException e) {
+        return getCommonResult(e);
+    }
+
+    @NotNull
+    private CommonResult getCommonResult(BindException e) {
         BindingResult bindingResult = e.getBindingResult();
         String message = null;
         if (bindingResult.hasErrors()) {

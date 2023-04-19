@@ -136,24 +136,22 @@ public class SmsHomeAdvertise implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", name=").append(name);
-        sb.append(", type=").append(type);
-        sb.append(", pic=").append(pic);
-        sb.append(", startTime=").append(startTime);
-        sb.append(", endTime=").append(endTime);
-        sb.append(", status=").append(status);
-        sb.append(", clickCount=").append(clickCount);
-        sb.append(", orderCount=").append(orderCount);
-        sb.append(", url=").append(url);
-        sb.append(", note=").append(note);
-        sb.append(", sort=").append(sort);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", name=" + name +
+                ", type=" + type +
+                ", pic=" + pic +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", status=" + status +
+                ", clickCount=" + clickCount +
+                ", orderCount=" + orderCount +
+                ", url=" + url +
+                ", note=" + note +
+                ", sort=" + sort +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

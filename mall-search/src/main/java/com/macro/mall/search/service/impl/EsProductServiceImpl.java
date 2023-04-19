@@ -38,10 +38,7 @@ import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilde
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -160,7 +157,7 @@ public class EsProductServiceImpl implements EsProductService {
         }
         nativeSearchQueryBuilder.withSorts(SortBuilders.scoreSort().order(SortOrder.DESC));
         NativeSearchQuery searchQuery = nativeSearchQueryBuilder.build();
-        LOGGER.info("DSL:{}", searchQuery.getQuery().toString());
+        LOGGER.info("DSL:{}", Objects.requireNonNull(searchQuery.getQuery()));
         SearchHits<EsProduct> searchHits = elasticsearchRestTemplate.search(searchQuery, EsProduct.class);
         if(searchHits.getTotalHits()<=0){
             return new PageImpl<>(ListUtil.empty(),pageable,0);
@@ -204,7 +201,7 @@ public class EsProductServiceImpl implements EsProductService {
             builder.withFilter(boolQueryBuilder);
             builder.withPageable(pageable);
             NativeSearchQuery searchQuery = builder.build();
-            LOGGER.info("DSL:{}", searchQuery.getQuery().toString());
+            LOGGER.info("DSL:{}", Objects.requireNonNull(searchQuery.getQuery()));
             SearchHits<EsProduct> searchHits = elasticsearchRestTemplate.search(searchQuery, EsProduct.class);
             if(searchHits.getTotalHits()<=0){
                 return new PageImpl<>(ListUtil.empty(),pageable,0);
@@ -248,7 +245,7 @@ public class EsProductServiceImpl implements EsProductService {
      */
     private EsProductRelatedInfo convertProductRelatedInfo(SearchHits<EsProduct> response) {
         EsProductRelatedInfo productRelatedInfo = new EsProductRelatedInfo();
-        Map<String, Aggregation> aggregationMap = ((Aggregations)response.getAggregations().aggregations()).asMap();
+        Map<String, Aggregation> aggregationMap = ((Aggregations) Objects.requireNonNull(response.getAggregations()).aggregations()).asMap();
         //设置品牌
         Aggregation brandNames = aggregationMap.get("brandNames");
         List<String> brandNameList = new ArrayList<>();

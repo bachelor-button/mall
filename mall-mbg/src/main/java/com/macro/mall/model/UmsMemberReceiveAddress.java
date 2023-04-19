@@ -115,22 +115,20 @@ public class UmsMemberReceiveAddress implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", memberId=").append(memberId);
-        sb.append(", name=").append(name);
-        sb.append(", phoneNumber=").append(phoneNumber);
-        sb.append(", defaultStatus=").append(defaultStatus);
-        sb.append(", postCode=").append(postCode);
-        sb.append(", province=").append(province);
-        sb.append(", city=").append(city);
-        sb.append(", region=").append(region);
-        sb.append(", detailAddress=").append(detailAddress);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", memberId=" + memberId +
+                ", name=" + name +
+                ", phoneNumber=" + phoneNumber +
+                ", defaultStatus=" + defaultStatus +
+                ", postCode=" + postCode +
+                ", province=" + province +
+                ", city=" + city +
+                ", region=" + region +
+                ", detailAddress=" + detailAddress +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

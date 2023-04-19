@@ -93,20 +93,18 @@ public class CmsMemberReport implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", reportType=").append(reportType);
-        sb.append(", reportMemberName=").append(reportMemberName);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", reportObject=").append(reportObject);
-        sb.append(", reportStatus=").append(reportStatus);
-        sb.append(", handleStatus=").append(handleStatus);
-        sb.append(", note=").append(note);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", reportType=" + reportType +
+                ", reportMemberName=" + reportMemberName +
+                ", createTime=" + createTime +
+                ", reportObject=" + reportObject +
+                ", reportStatus=" + reportStatus +
+                ", handleStatus=" + handleStatus +
+                ", note=" + note +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

@@ -19,6 +19,7 @@ import springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -82,7 +83,7 @@ public abstract class BaseSwaggerConfig {
         return result;
     }
 
-    public BeanPostProcessor generateBeanPostProcessor(){
+    public BeanPostProcessor generateBeanPostProcessor() {
         return new BeanPostProcessor() {
 
             @Override
@@ -105,7 +106,7 @@ public abstract class BaseSwaggerConfig {
             private List<RequestMappingInfoHandlerMapping> getHandlerMappings(Object bean) {
                 try {
                     Field field = ReflectionUtils.findField(bean.getClass(), "handlerMappings");
-                    field.setAccessible(true);
+                    Objects.requireNonNull(field).setAccessible(true);
                     return (List<RequestMappingInfoHandlerMapping>) field.get(bean);
                 } catch (IllegalArgumentException | IllegalAccessException e) {
                     throw new IllegalStateException(e);

@@ -35,8 +35,8 @@ public class CommonPage<T> {
      * 将PageHelper分页后的list转为分页信息
      */
     public static <T> CommonPage<T> restPage(List<T> list) {
-        CommonPage<T> result = new CommonPage<T>();
-        PageInfo<T> pageInfo = new PageInfo<T>(list);
+        CommonPage<T> result = new CommonPage<>();
+        PageInfo<T> pageInfo = new PageInfo<>(list);
         result.setTotalPage(pageInfo.getPages());
         result.setPageNum(pageInfo.getPageNum());
         result.setPageSize(pageInfo.getPageSize());
@@ -49,7 +49,7 @@ public class CommonPage<T> {
      * 将SpringData分页后的list转为分页信息
      */
     public static <T> CommonPage<T> restPage(Page<T> pageInfo) {
-        CommonPage<T> result = new CommonPage<T>();
+        CommonPage<T> result = new CommonPage<>();
         result.setTotalPage(pageInfo.getTotalPages());
         result.setPageNum(pageInfo.getNumber());
         result.setPageSize(pageInfo.getSize());

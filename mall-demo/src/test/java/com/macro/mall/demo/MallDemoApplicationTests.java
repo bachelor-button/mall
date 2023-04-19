@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 public class MallDemoApplicationTests {
-	private Logger logger = LoggerFactory.getLogger(MallDemoApplicationTests.class);
+	private final Logger logger = LoggerFactory.getLogger(MallDemoApplicationTests.class);
 	@Test
 	public void contextLoads() {
 	}

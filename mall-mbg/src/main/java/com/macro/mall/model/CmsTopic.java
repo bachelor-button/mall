@@ -134,24 +134,22 @@ public class CmsTopic implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", categoryId=").append(categoryId);
-        sb.append(", name=").append(name);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", startTime=").append(startTime);
-        sb.append(", endTime=").append(endTime);
-        sb.append(", attendCount=").append(attendCount);
-        sb.append(", attentionCount=").append(attentionCount);
-        sb.append(", readCount=").append(readCount);
-        sb.append(", awardName=").append(awardName);
-        sb.append(", attendType=").append(attendType);
-        sb.append(", content=").append(content);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return getClass().getSimpleName() +
+                " [" +
+                "Hash = " + hashCode() +
+                ", id=" + id +
+                ", categoryId=" + categoryId +
+                ", name=" + name +
+                ", createTime=" + createTime +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", attendCount=" + attendCount +
+                ", attentionCount=" + attentionCount +
+                ", readCount=" + readCount +
+                ", awardName=" + awardName +
+                ", attendType=" + attendType +
+                ", content=" + content +
+                ", serialVersionUID=" + serialVersionUID +
+                "]";
     }
 }

@@ -16,8 +16,8 @@ public class FlagValidatorClass implements ConstraintValidator<FlagValidator,Int
     @Override
     public boolean isValid(Integer value, ConstraintValidatorContext constraintValidatorContext) {
         boolean isValid = false;
-        for(int i=0;i<values.length;i++){
-            if(values[i].equals(String.valueOf(value))){
+        for (String s : values) {
+            if (s.equals(String.valueOf(value))) {
                 isValid = true;
                 break;
             }

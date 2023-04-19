@@ -54,8 +54,7 @@ public class CmsSubjectCommentExample {
     }
 
     protected Criteria createCriteriaInternal() {
-        Criteria criteria = new Criteria();
-        return criteria;
+        return new Criteria();
     }
 
     public void clear() {
@@ -563,7 +562,7 @@ public class CmsSubjectCommentExample {
     }
 
     public static class Criterion {
-        private String condition;
+        private final String condition;
 
         private Object value;
 
@@ -577,7 +576,7 @@ public class CmsSubjectCommentExample {
 
         private boolean listValue;
 
-        private String typeHandler;
+        private final String typeHandler;
 
         public String getCondition() {
             return condition;

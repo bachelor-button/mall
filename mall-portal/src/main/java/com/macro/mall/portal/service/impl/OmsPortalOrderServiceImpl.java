@@ -253,8 +253,7 @@ public class OmsPortalOrderServiceImpl implements OmsPortalOrderService {
         orderMapper.updateByPrimaryKeySelective(order);
         //恢复所有下单商品的锁定库存，扣减真实库存
         OmsOrderDetail orderDetail = portalOrderDao.getDetail(orderId);
-        int count = portalOrderDao.updateSkuStock(orderDetail.getOrderItemList());
-        return count;
+        return portalOrderDao.updateSkuStock(orderDetail.getOrderItemList());
     }
 
     @Override
@@ -447,7 +446,7 @@ public class OmsPortalOrderServiceImpl implements OmsPortalOrderService {
      * 计算该订单赠送的成长值
      */
     private Integer calcGiftGrowth(List<OmsOrderItem> orderItemList) {
-        Integer sum = 0;
+        int sum = 0;
         for (OmsOrderItem orderItem : orderItemList) {
             sum = sum + orderItem.getGiftGrowth() * orderItem.getProductQuantity();
         }
@@ -519,12 +518,11 @@ public class OmsPortalOrderServiceImpl implements OmsPortalOrderService {
      */
     private BigDecimal calcPayAmount(OmsOrder order) {
         //总金额+运费-促销优惠-优惠券优惠-积分抵扣
-        BigDecimal payAmount = order.getTotalAmount()
+        return order.getTotalAmount()
                 .add(order.getFreightAmount())
                 .subtract(order.getPromotionAmount())
                 .subtract(order.getCouponAmount())
                 .subtract(order.getIntegrationAmount());
-        return payAmount;
     }
 
     /**
